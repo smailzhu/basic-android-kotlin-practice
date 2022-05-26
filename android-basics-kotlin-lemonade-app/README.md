@@ -1,3 +1,5 @@
+!["Pass all test"](TestResult.png)
+
 Project: Lemonade App - Starter Code
 ==================================
 
