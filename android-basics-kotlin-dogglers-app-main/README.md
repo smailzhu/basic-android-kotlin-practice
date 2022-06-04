@@ -1,3 +1,5 @@
+!["Pass all tests"](testResult.png)
+
 Dogglers - Starter Code
 ==================================
 
