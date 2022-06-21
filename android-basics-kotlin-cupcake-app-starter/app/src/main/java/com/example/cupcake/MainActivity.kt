@@ -15,9 +15,28 @@
  */
 package com.example.cupcake
 
+import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.cupcake.R.id.nav_host_fragment
 
 /**
  * Activity for cupcake order flow.
  */
-class MainActivity : AppCompatActivity(R.layout.activity_main)
+//class MainActivity : AppCompatActivity(R.layout.activity_main)
+
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Add back button (icon) on app bar
+
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        setupActionBarWithNavController(navController)
+    }
+}
