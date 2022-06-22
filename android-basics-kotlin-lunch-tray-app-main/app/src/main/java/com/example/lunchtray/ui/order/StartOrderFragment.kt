@@ -16,10 +16,13 @@
 package com.example.lunchtray.ui.order
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.example.lunchtray.R
 import com.example.lunchtray.databinding.FragmentStartOrderBinding
 
 /**
@@ -46,6 +49,9 @@ class StartOrderFragment : Fragment() {
         // Navigate to entree menu
         binding.startOrderBtn.setOnClickListener {
             // TODO: navigate to the EntreeMenuFragment
+            Log.d("StartMenuFragment", "before navigate")
+            findNavController().navigate(R.id.action_startOrderFragment_to_entreeMenuFragment)
+            Log.d("StartMenuFragment", "after navigate")
         }
         return root
     }
