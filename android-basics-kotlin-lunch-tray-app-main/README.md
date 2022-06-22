@@ -1,3 +1,5 @@
+!["Pass all test"](test_result.png)
+
 Lunch Tray - Starter Code
 ==================================
 
