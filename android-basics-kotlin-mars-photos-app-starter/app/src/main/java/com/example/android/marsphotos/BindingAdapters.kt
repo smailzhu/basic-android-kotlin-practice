@@ -7,7 +7,7 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.android.marsphotos.network.MarsPhoto
-import com.example.android.marsphotos.overview.OverviewViewModel
+import com.example.android.marsphotos.overview.OverviewViewModel.MarsApiStatus
 import com.example.android.marsphotos.overview.PhotoGridAdapter
 
 class BindingAdapters {
@@ -27,18 +27,18 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
 @BindingAdapter("marsApiStatus")
 fun bindStatus(
     statusImageView: ImageView,
-    status: OverviewViewModel.MarsApiStatus?
+    status: MarsApiStatus?
 ) {
     when (status) {
-        OverviewViewModel.MarsApiStatus.LOADING -> {
+        MarsApiStatus.LOADING -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.loading_animation)
         }
-        OverviewViewModel.MarsApiStatus.ERROR -> {
+        MarsApiStatus.ERROR -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.ic_connection_error)
         }
-        OverviewViewModel.MarsApiStatus.DONE -> {
+        MarsApiStatus.DONE -> {
             statusImageView.visibility = View.GONE
         }
     }
