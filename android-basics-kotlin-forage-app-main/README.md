@@ -1,3 +1,5 @@
+!["Pass all tests"](testResult.png)
+
 Forage - Starter Code
 ==================================
 
