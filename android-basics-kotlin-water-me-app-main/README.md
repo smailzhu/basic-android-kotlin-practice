@@ -1,3 +1,5 @@
+![](testResult.png)
+
 Water Me - Starter Code
 ==================================
 
